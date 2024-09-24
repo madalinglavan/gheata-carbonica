@@ -16,6 +16,7 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
+    text-transform: uppercase;
 }
 
 .main-header {
@@ -64,7 +65,7 @@ body {
 }
 #video-section .product-description {
     position: absolute; /* Poziționează descrierea absolut */
-    top: 50%; /* Centrăm pe verticală */
+    top: 80%; /* Centrăm pe verticală */
     left: 50%; /* Centrăm pe orizontală */
     transform: translate(-50%, -50%); /* Aducem centrul descrierii în centru */
     color: white; /* Schimbă culoarea textului pentru a fi vizibil */
@@ -73,9 +74,12 @@ body {
     padding: 1rem; /* Adaugă puțin padding */
     border-radius: 10px; /* Colțuri rotunjite */
     width: 100%;
+    background-color: #0000002c;
 }
 #video-section .product-description h2{
     margin-bottom: 30px;
+    text-shadow: 12px 5px 12px black;
+    font-size: 1.3rem;
 }
 .product-description h2 {
     font-size: 2rem;
