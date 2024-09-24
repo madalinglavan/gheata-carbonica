@@ -127,7 +127,9 @@ body {
     display: flex;
     flex-wrap: wrap; /* Permite adaptarea pe mai multe linii */
     justify-content: center; /* Centrare */
-    gap: 2rem; /* Spațiu între elemente */
+    gap: 1rem; /* Spațiu între elemente */
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .info-item {
@@ -270,7 +272,8 @@ footer{
     .product-image video{
         width: 100%;
         border-radius: 16px;
-        filter: drop-shadow(10px 10px 15px rgb(128, 128, 128));
+        opacity: .6;
+        filter: drop-shadow(0px 20px 25px rgb(128, 128, 128));
     }
     #video-section .product-description {
         position: absolute; /* Poziționează descrierea absolut */
