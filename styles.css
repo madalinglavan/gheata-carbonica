@@ -16,7 +16,6 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
-    text-transform: uppercase;
 }
 
 .main-header {
@@ -46,7 +45,7 @@ body {
     border: solid 2px #fff;
 }
 .product-image video{
-    width: 300px;
+    height: 70vh;
     border-radius: 16px;
     filter: drop-shadow(10px 10px 15px rgb(128, 128, 128));
 }
@@ -63,24 +62,7 @@ body {
     margin-bottom: 2rem;
     text-align: center; /* Centrarea textului */
 }
-#video-section .product-description {
-    position: absolute; /* Poziționează descrierea absolut */
-    top: 80%; /* Centrăm pe verticală */
-    left: 50%; /* Centrăm pe orizontală */
-    transform: translate(-50%, -50%); /* Aducem centrul descrierii în centru */
-    color: white; /* Schimbă culoarea textului pentru a fi vizibil */
-    text-align: center; /* Aliniere text */
-    z-index: 10; /* Asigură-te că este deasupra video-ului */
-    padding: 1rem; /* Adaugă puțin padding */
-    border-radius: 10px; /* Colțuri rotunjite */
-    width: 100%;
-    background-color: #0000002c;
-}
-#video-section .product-description h2{
-    margin-bottom: 30px;
-    text-shadow: 12px 5px 12px black;
-    font-size: 1.3rem;
-}
+
 .product-description h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -101,6 +83,64 @@ body {
 
 .product-image img {
     width: 100%;
+}
+.promo-section {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 2rem;
+    text-align: justify; /* Alinierea textului */
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.promo-description {
+    max-width: 800px; /* Lățimea maximă pentru text */
+    margin: 0 auto; /* Centrarea secțiunii */
+}
+
+.promo-description h2 {
+    font-size: 2.5rem; /* Dimensiune mare pentru titlu */
+    margin-bottom: 1rem; /* Spațiu sub titlu */
+    text-align: center; /* Centrarea titlului */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Efect de umbră pe litere */
+}
+
+.promo-description p {
+    font-size: 1.2rem; /* Dimensiune text mai mare */
+    line-height: 1.6; /* Între liniile de text */
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.3); /* Efect pe litere */
+}
+.info-section {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 2rem;
+    text-align: center; /* Centrare text */
+    margin-bottom: 50px;
+}
+
+.info-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-items {
+    display: flex;
+    flex-wrap: wrap; /* Permite adaptarea pe mai multe linii */
+    justify-content: center; /* Centrare */
+    gap: 2rem; /* Spațiu între elemente */
+}
+
+.info-item {
+    background: rgba(255, 255, 255, 0.1); /* Fundal semi-transparent */
+    border-radius: 10px;
+    padding: 1rem;
+    width: 200px; /* Lățime fixă pentru elemente */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Umbră pentru adâncire */
+}
+
+.info-item i {
+    font-size: 2rem; /* Dimensiune mare pentru icoane */
+    margin-bottom: 0.5rem; /* Spațiu între icoană și text */
 }
 
 .cta-button {
@@ -231,6 +271,24 @@ footer{
         width: 100%;
         border-radius: 16px;
         filter: drop-shadow(10px 10px 15px rgb(128, 128, 128));
+    }
+    #video-section .product-description {
+        position: absolute; /* Poziționează descrierea absolut */
+        top: 80%; /* Centrăm pe verticală */
+        left: 50%; /* Centrăm pe orizontală */
+        transform: translate(-50%, -50%); /* Aducem centrul descrierii în centru */
+        color: white; /* Schimbă culoarea textului pentru a fi vizibil */
+        text-align: center; /* Aliniere text */
+        z-index: 10; /* Asigură-te că este deasupra video-ului */
+        padding: 1rem; /* Adaugă puțin padding */
+        border-radius: 10px; /* Colțuri rotunjite */
+        width: 100%;
+        background-color: #0000002c;
+    }
+    #video-section .product-description h2{
+        margin-bottom: 30px;
+        text-shadow: 12px 5px 12px black;
+        font-size: 1.3rem;
     }
 
     .product-description h2 {
