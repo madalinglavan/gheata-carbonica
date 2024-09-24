@@ -115,7 +115,7 @@ body {
     color: var(--text-color);
     padding: 2rem;
     text-align: center; /* Centrare text */
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 .info-section h2 {
@@ -143,6 +143,10 @@ body {
 .info-item i {
     font-size: 2rem; /* Dimensiune mare pentru icoane */
     margin-bottom: 0.5rem; /* Spațiu între icoană și text */
+}
+.info-item a{
+    text-decoration: none;
+    color: #fff;
 }
 
 .cta-button {
@@ -264,16 +268,17 @@ footer{
         padding: 2rem;
     }
     .video-section{
-        width: 50%;
+        width: 120%;
         justify-content: center;
         align-items: center;
     
     }
     .product-image video{
         width: 100%;
+        object-fit: cover;
         border-radius: 16px;
         opacity: .6;
-        filter: drop-shadow(0px 20px 25px rgb(128, 128, 128));
+        filter: drop-shadow(0px 20px 25px rgb(255, 255, 255));
     }
     #video-section .product-description {
         position: absolute; /* Poziționează descrierea absolut */
@@ -292,6 +297,7 @@ footer{
         margin-bottom: 30px;
         text-shadow: 12px 5px 12px black;
         font-size: 1.3rem;
+        text-transform: uppercase;
     }
 
     .product-description h2 {
