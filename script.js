@@ -20,3 +20,16 @@ document.addEventListener('DOMContentLoaded', function () {
     // Efect continuu, la intervale aleatorii
     setInterval(createSmokeEffect, 1000);
 });
+
+
+function showFooterButtons(button) {
+    // Găsește următorul element div care conține butoanele de apelare
+    const footerButtons = button.nextElementSibling;
+    
+    // Verifică dacă sunt vizibile și inversează vizibilitatea
+    if (footerButtons.style.display === "none" || footerButtons.style.display === "") {
+        footerButtons.style.display = "block";
+    } else {
+        footerButtons.style.display = "none";
+    }
+}

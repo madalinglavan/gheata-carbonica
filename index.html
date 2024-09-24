@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Gheață Carbonică - soluția perfectă pentru un efect spectaculos, perfectă pentru evenimente și prezentări.">
+    <script src="https://kit.fontawesome.com/f26a888174.js" crossorigin="anonymous"></script>
     <title>Gheață Carbonică - Efecte spectaculoase cu aburi</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-
     <!-- Header -->
     <header class="main-header">
         <h1>Gheață Carbonică</h1>
@@ -23,7 +24,15 @@
 <section id="video-section" class="product-section">
     <div class="product-description">
         <h2>Gheață Carbonică în Gorj</h2>
-        <button class="cta-button">Contactează-ne</button>
+        <button class="cta-button" onclick="showFooterButtons(this)">Contactează-ne</button>
+        <div class="cta-footer-buttons" style="display: none;">
+            <a href="tel:+40770653927" class="fixed-button call-button">
+                <i class="fa fa-phone"></i> <span>Apelează</span>
+            </a>
+            <a href="https://wa.me/+40770653927" class="fixed-button whatsapp-button" target="_blank">
+                <i class="fa fa-whatsapp"></i> <span>WhatsApp</span>
+            </a>
+        </div>
     </div>
     <div class="product-image">
         <video autoplay muted loop playsinline>
@@ -31,38 +40,41 @@
             Browser-ul tău nu suportă redarea video.
         </video>
     </div>
-    
-    
+</section>
+
+   <!-- Section: Gheață Carbonică cu efect de abur -->
+<section id="product" class="product-section">
+    <div class="product-description">
+        <h2>Efecte cu Gheață Carbonică</h2>
+        <p>Creează un efect spectaculos la orice eveniment cu ajutorul gheții carbonice!</p>
+        <button class="cta-button" onclick="showFooterButtons(this)">Rezervă acum</button>
+        <div class="cta-footer-buttons" style="display: none;">
+            <a href="tel:+40770653927" class="fixed-button call-button">
+                <i class="fa fa-phone"></i> <span>Apelează</span>
+            </a>
+            <a href="https://wa.me/+40770653927" class="fixed-button whatsapp-button" target="_blank">
+                <i class="fa fa-whatsapp"></i> <span>WhatsApp</span>
+            </a>
+        </div>
+    </div>
+    <div class="product-image">
+        <img src="img/cool ice cubes dry.png" alt="Gheață Carbonică" id="dry-ice">
+    </div>
 </section>
 
 
+    <!-- Footer -->
+    <footer class="fixed-footer">
+    <!-- Call Button -->
+        <a href="tel:+40770653927" class="fixed-button call-button">
+            <i class="fa fa-phone"></i> <span>Apelează</span>
+        </a>
 
-    <!-- Section: Gheață Carbonică cu efect de abur -->
-    <section id="product" class="product-section">
-        <div class="product-description">
-            <h2>Efecte cu Gheață Carbonică</h2>
-            <p>Creează un efect spectaculos la orice eveniment cu ajutorul gheții carbonice!</p>
-            <button class="cta-button">Rezervă acum</button>
-        </div>
-        <div class="product-image">
-            <img src="img/cool ice cubes dry.png" alt="Gheață Carbonică" id="dry-ice">
-        </div>
-    </section>
-
-    <!-- Section: Contact -->
-    <section id="contact" class="contact-section">
-        <h2>Contact</h2>
-        <form>
-            <label for="name">Nume:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <button type="submit" class="cta-button">Trimite</button>
-        </form>
-    </section>
-
-    <script src="script.js"></script>
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/+40770653927" class="fixed-button whatsapp-button" target="_blank">
+            <i class="fa fa-whatsapp"></i> <span>WhatsApp</span>
+        </a>
+    </footer>
+    
 </body>
 </html>
