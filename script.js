@@ -33,3 +33,25 @@ function showFooterButtons(button) {
         footerButtons.style.display = "none";
     }
 }
+function showPopup() {
+    console.log("A fost apasat butonul de Contact");
+    const popup = document.getElementById("contact-popup");
+    popup.style.display = "flex";
+}
+
+function closePopup() {
+    console.log("Pop-up-ul a fost închis");
+    document.getElementById("contact-popup").style.display = "none";
+}
+
+// Închide pop-up-ul când dai click în afara lui
+window.onclick = function(event) {
+    const popup = document.getElementById("contact-popup");
+    if (event.target === popup) {
+        closePopup();
+        console.log("A fost apasat in afara pop-up-ului");
+    }
+}
+
+// Adaugă un event listener pe link-ul Contact
+document.querySelector('nav ul li a[href="#contact"]').addEventListener('click', showPopup);

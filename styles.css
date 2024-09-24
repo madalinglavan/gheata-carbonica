@@ -23,6 +23,7 @@ body {
     color: white;
     padding: 1rem;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .main-header h1 {
@@ -132,14 +133,13 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.info-item {
-    background: rgba(255, 255, 255, 0.1); /* Fundal semi-transparent */
-    border-radius: 10px;
-    padding: 1rem;
-    width: 200px; /* Lățime fixă pentru elemente */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Umbră pentru adâncire */
+.info-items {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 2 coloane pe ecrane mici */
+    gap: 1rem; /* Spațiu între elemente */
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 .info-item i {
     font-size: 2rem; /* Dimensiune mare pentru icoane */
     margin-bottom: 0.5rem; /* Spațiu între icoană și text */
@@ -229,6 +229,49 @@ footer{
 .cta-footer-buttons a:hover {
     background-color: #009688;
 }
+#contact-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Asigură-te că este un număr mare */
+}
+
+.popup-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.popup-button {
+    display: block;
+    margin: 10px 0;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.popup-button:hover {
+    background-color: #009688; /* Culoare la hover */
+}
+
+.close {
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
 
 
 .smoke {
@@ -312,8 +355,30 @@ footer{
         padding: 0.8rem 1.5rem;
     }
 
-    .contact-section {
-        padding: 2rem;
+    .info-section h2 {
+        font-size: 2rem; /* Dimensiune mai mică pentru titlu */
     }
+
+    .info-item {
+        width: 100%; /* Lățime 100% pentru a umple coloana */
+        padding: 0.8rem; /* Padding mai mic */
+    
+    }
+
+    .info-item i {
+        font-size: 1rem; /* Dimensiune mai mică pentru icoane */
+    }
+    .info-item p{
+        font-size: 1rem;
+        text-shadow: 2px 2px 5px black;
+        text-align: center;
+        text-decoration: solid;
+        text-transform: uppercase;
+    }
+    .info-items{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
     
 }
