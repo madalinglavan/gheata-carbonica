@@ -13,7 +13,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: var(--primary-color);
+    background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
 }
@@ -41,13 +41,19 @@ body {
     text-decoration: none;
     font-size: 1.2rem;
 }
-
+.video-section{
+    border: solid 2px #fff;
+}
+.product-image video{
+    width: 300px;
+    border-radius: 16px;
+    filter: drop-shadow(10px 10px 15px rgb(128, 128, 128));
+}
 .product-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 3rem;
-    flex-wrap: wrap; /* Pentru ecrane mici */
 }
 
 .product-description {
@@ -67,6 +73,11 @@ body {
 
 .product-image {
     width: 100%; /* Lățime completă pe ecrane mici */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+
 }
 
 .product-image img {
@@ -147,6 +158,17 @@ form button {
         flex-direction: column;
         padding: 2rem;
     }
+    .video-section{
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .product-image video{
+        width: 100%;
+        border-radius: 16px;
+        filter: drop-shadow(10px 10px 15px rgb(128, 128, 128));
+    }
 
     .product-description h2 {
         font-size: 1.8rem;
@@ -163,4 +185,5 @@ form button {
     .contact-section {
         padding: 2rem;
     }
+    
 }
