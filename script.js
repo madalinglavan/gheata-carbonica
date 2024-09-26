@@ -55,3 +55,18 @@ window.onclick = function(event) {
 
 // Adaugă un event listener pe link-ul Contact
 document.querySelector('nav ul li a[href="#contact"]').addEventListener('click', showPopup);
+
+
+
+document.addEventListener('scroll', function() {
+    const orderProcess = document.getElementById('order-process');
+    const rect = orderProcess.getBoundingClientRect();
+
+    // Verificăm dacă div-ul este vizibil pe ecran
+    if (rect.top < window.innerHeight && rect.bottom >= 0) {
+        // Dacă animația este deja activă, o resetăm
+        orderProcess.classList.remove('animate'); // Înlăturăm clasa animate
+        void orderProcess.offsetWidth; // Trigger reflow
+        orderProcess.classList.add('animate'); // Adăugăm din nou clasa animate
+    }
+});

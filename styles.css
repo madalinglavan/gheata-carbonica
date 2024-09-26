@@ -272,33 +272,64 @@ footer{
     right: 15px;
 }
 
-
-
-.smoke {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    filter: drop-shadow(10px 10px 15px rgb(128, 128, 128));
-    background: rgba(255, 255, 255, 0.199);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.322);
-    animation: smokeMove 3s ease-out infinite;
+#order-process {
+    padding: 20px;
+    border:solid 2px #fff;
+    border-radius: 12px;
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s, transform 0.5s;
+    margin-bottom: 20px;
 }
 
-@keyframes smokeMove {
-    0% {
-        transform: scale(0.5) translateY(0) translateX(0);
-        opacity: 0.3;
-    }
-    50% {
-        opacity: 0.6;
-        transform: scale(1.2) translateY(-30px) translateX(20px);
-    }
-    100% {
-        transform: scale(1.5) translateY(-60px) translateX(-10px);
-        opacity: 0;
+#order-process.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.info {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.highlights {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.highlight {
+    background-color: #0077ff;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    flex-grow: 1;
+    animation: highlightAppear 1.2s forwards ease-in-out;
+    opacity: 0;
+}
+
+.highlight:nth-child(1) {
+    animation-delay: 1.2s;
+}
+
+.highlight:nth-child(2) {
+    animation-delay: 1.4s;
+}
+
+.highlight:nth-child(3) {
+    animation-delay: 1.6s;
+}
+
+@keyframes highlightAppear {
+    to {
+        opacity: 1;
     }
 }
+
 
 /* Media query pentru ecrane mici */
 @media (max-width: 768px) {
@@ -311,7 +342,7 @@ footer{
         padding: 2rem;
     }
     .video-section{
-        width: 120%;
+        width: 100%;
         justify-content: center;
         align-items: center;
     
@@ -325,7 +356,7 @@ footer{
     }
     #video-section .product-description {
         position: absolute; /* Poziționează descrierea absolut */
-        top: 80%; /* Centrăm pe verticală */
+        top: 50%; /* Centrăm pe verticală */
         left: 50%; /* Centrăm pe orizontală */
         transform: translate(-50%, -50%); /* Aducem centrul descrierii în centru */
         color: white; /* Schimbă culoarea textului pentru a fi vizibil */
@@ -379,6 +410,26 @@ footer{
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .highlights {
+        flex-direction: column;
+    }
 
     
+}
+
+
+@media (min-width: 768px) and (max-width: 1224px) {
+
+    #video-section .product-description {
+        width: 50%;
+        z-index: 1;
+    }
+    
+    .product-image video {
+        width: 50%;
+        object-fit: cover;
+        border-radius: 16px;
+        opacity: 0.6;
+        filter: drop-shadow(0px 20px 25px rgb(255, 255, 255));
+    }
 }
